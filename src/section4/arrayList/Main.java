@@ -1,7 +1,9 @@
-package section4;
+package section4.arrayList;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import section4.Employee;
 
 public class Main {
 
@@ -13,7 +15,7 @@ public class Main {
 		employeeList.add(new Employee("Mary", "Smith", 3));
 		employeeList.add(new Employee("Mike", "Wilson", 4));
 		
-		employeeList.forEach(employee -> System.out.println(employee));
+//		employeeList.forEach(employee -> System.out.println(employee));
 		
 //		System.out.println();
 //		System.out.println(employeeList.get(1));
@@ -23,8 +25,8 @@ public class Main {
 //		System.out.println();
 //		System.out.println(employeeList.get(1));
 		
-		employeeList.add(2, new Employee("Edward", "Baldwin", 3));
-		employeeList.forEach(employee -> System.out.println(employee));
+//		employeeList.add(2, new Employee("Edward", "Baldwin", 3));
+//		employeeList.forEach(employee -> System.out.println(employee));
 	}
 
 }
