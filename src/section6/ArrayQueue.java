@@ -2,6 +2,7 @@ package section6;
 
 import java.util.NoSuchElementException;
 
+// Not finished
 public class ArrayQueue {
 
 	private Employee[] queue;
@@ -14,17 +15,22 @@ public class ArrayQueue {
 	
 	// back pointer always points to the next available position at the back
 	public void add(Employee employee) {
-		if (back == queue.length) {
+		if (size() == queue.length - 1) {
 			Employee[] newArray = new Employee[2 * queue.length];
 			System.arraycopy(queue, 0, newArray, 0, queue.length);
 			queue = newArray;
 		}
 		
 		queue[back] = employee;
-		back++;
+		if (back < queue.length - 1) {
+			back++;
+		} else {
+			back = 0;
+		}
+		
 	}
 	
-	// front  pointer always points to the next available position at the front
+	// front  pointer always points to the first  position at the front
 	public Employee remove() {
 		if (size() == 0) {
 			throw new NoSuchElementException();
